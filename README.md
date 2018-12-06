@@ -22,6 +22,7 @@ can be tested [here](https://www.lua.org/cgi-bin/demo)
 # Documentation
 
 **svg:create()**
+
     create the svg object
     Params:
     - width: number => width of the drawing

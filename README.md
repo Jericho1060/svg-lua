@@ -58,3 +58,13 @@ can be tested [here](https://www.lua.org/cgi-bin/demo) *(use the minified versio
     - stroke: string => lines color, default to svg:create() parameter ("#000000" by default)
     - strokeWidth: string => lines width, default to 1
     - fill: string => fill color, default to svg:create() parameter ("transparent" by default)
+
+**svg:Ellipse(cx, cy, rx, ry, stroke, strokeWidth, fill)** *add an ellipse*
+
+    - cx: number => Horizontal position of the center, default to 30
+    - cy: number => Vertical position of the center, default to 30
+    - rx: number => Horizontal radius of the ellipse, default to 25
+    - ry: number => Vertical radius of the ellipse, default to 15
+    - stroke: string => lines color, default to svg:create() parameter ("#000000" by default)
+    - strokeWidth: string => lines width, default to 1
+    - fill: string => fill color, default to svg:create() parameter ("transparent" by default)

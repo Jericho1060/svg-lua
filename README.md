@@ -15,3 +15,5 @@ result :
     <rect y="10" x="10" stroke-width="1" height="10" width="10" rx="0" ry="0" />
 </svg>
 ```
+
+can be tested [here](https://www.lua.org/cgi-bin/demo)

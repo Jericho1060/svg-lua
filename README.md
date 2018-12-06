@@ -32,3 +32,16 @@ can be tested [here](https://www.lua.org/cgi-bin/demo)
 - element: svg.Element => see farther for element list
 
 **svg:draw()** *return the svg formated string*
+
+## Elements for svg:add()
+**svg:Rect()** *add a rectangle*
+
+- x: number => Horizontal position from top left corner, default to 10
+- y: number => Vertical position from top left corner, default to 10
+- width: number => Width of the rectangle, default to 10
+- height: number => Height of the rectangle, default to 10
+- stroke: string => lines color, default to '#000000'
+- strokeWidth: string => lines width, default to 1
+- fill: string => fill color, default to transparent
+- rx: number => Horizontal raduis of the corners, default to 0
+- ry: number => Vertical radius of the corners, default to 0

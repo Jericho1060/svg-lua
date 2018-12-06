@@ -24,7 +24,7 @@ function svg:create(width, heigth, stroke, fill)
     -- function to create svg.Element
     --      name: string => name of the element (standard svg element name)
     --      options: table => a table containing all the parameters of the element
-    function s.Element:create(name, options)
+    function s.Element:create(name, options, content)
         local e = {}
         setmetatable(e,s.Element)
         e.name = name
@@ -33,7 +33,11 @@ function svg:create(width, heigth, stroke, fill)
             e[key] = value
             e.strElement = e.strElement .. key .. "=\"" .. value .. "\" "
         end
-        e.strElement = e.strElement .. "/>"
+        if content ~= nil then
+            e.strElement = e.strElement .. ">" .. content .. "</" .. name .. ">"
+        else
+            e.strElement = e.strElement .. "/>"
+        end
         return e;
     end
 
@@ -54,6 +58,21 @@ function svg:draw()
     end
     svgStr = svgStr .. "</svg>"
     return svgStr
+end
+
+-- function to add text
+--      text: string => the text to write
+--      x: number => Horizontal position 
+--      y: number => Vertical position
+--      style: string => style of the text (css with svg params)
+--      tranform: string => transformation options (eg: rotation)
+function svg:Text(text, x, y, style, transform)
+    return self.Element:create("text", {
+        x = x or 10,
+        y = y or 50,
+        style = style or ("font-family: Verdana; font-size: 10; stroke: " .. self.stroke .. "; fill: " .. self.fill .. ";"),
+        transform = transform or ""
+    }, text)
 end
 
 -- function to create a rectangle

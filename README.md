@@ -39,6 +39,18 @@ can be tested [here](https://www.lua.org/cgi-bin/demo) *(use the minified versio
 **svg:draw()** *return the svg formated string*
 
 ### Elements for svg:add(element)
+**svg:Text(text, x, y, style, transform)** *add text*
+
+    - text: string => the text to write
+    - x: number => Horizontal position, default to 10
+    - y: number => Vertical position, default to 50
+    - style: string => style of the text (css with svg params), default to:
+        * `font-family: Verdana`
+        * `font-size: 10`
+        * `stroke: self.stroke` svg:create() parameter ("#000000" by default)
+        * `fill: self.fill` svg:create() parameter ("transparent" by default)
+    - tranform: string => transformation options (eg: rotation)
+
 **svg:Rect(x, y, width, height, stroke, strokeWidth, fill, rx, ry)** *add a rectangle*
 
     - x: number => Horizontal position from top left corner, default to 10

@@ -15,7 +15,7 @@ result for `print(mon_dessin:draw)` :
 </svg>
 ```
 
-can be tested [here](https://www.lua.org/cgi-bin/demo)
+can be tested [here](https://www.lua.org/cgi-bin/demo) *(use the minified version, the text field is limited in size)*
 
 `svg.min.lua` generated with [Lua Minifier from Mothereff.in](https://mothereff.in/lua-minifier)
 

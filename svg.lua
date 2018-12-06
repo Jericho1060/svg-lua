@@ -97,3 +97,23 @@ function svg:Circle(r, cx, cy, stroke, strokeWidth, fill)
         fill = fill or self.fill
     })
 end
+
+-- function to create an ellipse
+--      cx: number => Horizontal position of the center
+--      cy: number => Vertical position of the center
+--      rx: number => Horizontal radius of the ellipse
+--      ry: number => Vertical radius of the ellipse
+--      stroke: string => lines color
+--      strokeWidth: string => lines width
+--      fill: string => fill color
+function svg:Ellipse(cx, cy, rx, ry, stroke, strokeWidth, fill)
+    return self.Element:create("ellipse", {
+        rx = r or 25,
+        ry = r or 15,
+        cx = cx or 30,
+        cy = cy or 30,
+        stroke = stroke or self.stroke,
+        ["stroke-width"] = strokeWidth or 1,
+        fill = fill or self.fill
+    })
+end

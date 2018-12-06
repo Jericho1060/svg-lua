@@ -8,7 +8,7 @@ mon_dessin:add(mon_dessin:Rect())
 mon_dessin:draw()
 ```
 
-result for `print(mon_dessin:draw)` :
+result for `print(mon_dessin:draw())` :
 ```html
 <svg width="100" height="100" fill="transparent" stroke="#000000" version="1.1" xmlns="http://www.w3.org/2000/svg">
     <rect y="10" x="10" stroke-width="1" height="10" width="10" rx="0" ry="0" />
@@ -37,16 +37,16 @@ can be tested [here](https://www.lua.org/cgi-bin/demo) *(use the minified versio
 
 **svg:draw()** *return the svg formated string*
 
-### Elements for svg:add()
+### Elements for svg:add(element)
 **svg:Rect(x, y, width, height, stroke, strokeWidth, fill, rx, ry)** *add a rectangle*
 
     - x: number => Horizontal position from top left corner, default to 10
     - y: number => Vertical position from top left corner, default to 10
     - width: number => Width of the rectangle, default to 10
     - height: number => Height of the rectangle, default to 10
-    - stroke: string => lines color, default to svg:create() parameter *("#000000")*
+    - stroke: string => lines color, default to svg:create() parameter ("#000000" by default)
     - strokeWidth: string => lines width, default to 1
-    - fill: string => fill color, default to svg:create() parameter *("transparent")*
+    - fill: string => fill color, default to svg:create() parameter ("transparent" by default)
     - rx: number => Horizontal raduis of the corners, default to 0
     - ry: number => Vertical radius of the corners, default to 0
 
@@ -55,6 +55,6 @@ can be tested [here](https://www.lua.org/cgi-bin/demo) *(use the minified versio
     - r: number => circle radius, default to 25
     - cx: number => Horizontal position of the center, default to 30
     - cy: number => Vertical position of the center, default to 30
-    - stroke: string => lines color, default to svg:create() parameter *("#000000")*
+    - stroke: string => lines color, default to svg:create() parameter ("#000000" by default)
     - strokeWidth: string => lines width, default to 1
-    - fill: string => fill color, default to svg:create() parameter *("transparent")*
+    - fill: string => fill color, default to svg:create() parameter ("transparent" by default)

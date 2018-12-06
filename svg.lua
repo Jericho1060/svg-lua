@@ -56,7 +56,7 @@ function svg:draw()
     return svgStr
 end
 
--- INIT Rect element Class
+-- function to create a rectangle
 --      x: number => Position du rectangle sur l'axe horizontal par rapport au coin supérieur gauche
 --      y: number => Position du rectangle sur l'axe vertical par rapport au coin supérieur gauche
 --      width: number => Largeur du rectangle
@@ -72,8 +72,8 @@ function svg:Rect(x, y, width, height, stroke, strokeWidth, fill, rx, ry)
         y = y or 10,
         width = width or 10,
         height = height or 10,
-        stroke = stroke or svg.stroke,
-        fill = fill or svg.fill,
+        stroke = stroke or self.stroke,
+        fill = fill or self.fill,
         ["stroke-width"] = strokeWidth or 1,
         rx = rx or 0,
         ry = ry or 0

@@ -20,9 +20,10 @@ can be tested [here](https://www.lua.org/cgi-bin/demo)
 `svg.min.lua` generated with [Lua Minifier from Mothereff.in](https://mothereff.in/lua-minifier)
 
 # Documentation
-**svg:create()** *create the svg object*
+**svg:create(width, height, stroke, fill)** *create the svg object*
+
 Params:
-- width: number => width of the drawing
-- height: number => height of the drawing
-- stroke: string => lines color
-- fill: string => fill color
+- width: number => width of the drawing, default to 100
+- height: number => height of the drawing, default to 100
+- stroke: string => lines color, default to '#000000'
+- fill: string => fill color, default to 'transparent'

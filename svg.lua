@@ -88,7 +88,7 @@ end
 --      strokeWidth: string => lines width
 --      fill: string => fill color
 function svg:Circle(r, cx, cy, stroke, strokeWidth, fill)
-    return self.Element.create("circle", {
+    return self.Element:create("circle", {
         r = r or 25,
         cx = cx or 30,
         cy = cy or 30,

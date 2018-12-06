@@ -17,7 +17,8 @@ result for `print(mon_dessin:draw())` :
 
 ### testing
 can be tested [here](https://www.lua.org/cgi-bin/demo) *(use the minified version, the text field is limited in size)*
-*you can use the content of the file `test.lua` for testing, it includes the minified version and all elements with default values*
+
+*you can use the content of the file `test.lua` for testing, it includes the minified version and all elements with default values, the result can be found in `index.html`*
 
 ### minified version
 `svg.min.lua` generated with [Lua Minifier from Mothereff.in](https://mothereff.in/lua-minifier)

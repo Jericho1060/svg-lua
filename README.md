@@ -10,7 +10,7 @@ mon_dessin:draw()
 ```
 
 result :
-```svg
+```html
 <svg width="100" height="100" fill="transparent" stroke="#000000" version="1.1" xmlns="http://www.w3.org/2000/svg">
     <rect y="10" x="10" stroke-width="1" height="10" width="10" rx="0" ry="0" />
 </svg>

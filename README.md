@@ -1,7 +1,6 @@
 # svg-lua
 svg lua library
 
-
 # usage
 ```lua
 mon_dessin = svg:create()
@@ -19,3 +18,13 @@ result :
 can be tested [here](https://www.lua.org/cgi-bin/demo)
 
 `svg.min.lua` generated with [Lua Minifier from Mothereff.in](https://mothereff.in/lua-minifier)
+
+# Documentation
+
+**svg:create()**
+    create the svg object
+    Params:
+    - width: number => width of the drawing
+    - height: number => height of the drawing
+    - stroke: string => lines color
+    - fill: string => fill color

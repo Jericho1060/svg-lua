@@ -79,3 +79,21 @@ function svg:Rect(x, y, width, height, stroke, strokeWidth, fill, rx, ry)
         ry = ry or 0
     })
 end
+
+-- function to create a circle
+--      r: number => circle radius
+--      cx: number => Horizontal position of the center
+--      cy: number => Vertical position of the center
+--      stroke: string => lines color
+--      strokeWidth: string => lines width
+--      fill: string => fill color
+function svg:Circle(r, cx, cy, stroke, strokeWidth, fill)
+    return self.Element.create("circle", {
+        r = r or 25,
+        cx = cx or 30,
+        cy = cy or 30,
+        stroke = stroke or self.stroke,
+        ["stroke-width"] = strokeWidth or 1,
+        fill = fill or self.fill
+    })
+end

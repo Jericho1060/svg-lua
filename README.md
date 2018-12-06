@@ -25,8 +25,8 @@ can be tested [here](https://www.lua.org/cgi-bin/demo) *(use the minified versio
 
     - width: number => width of the drawing, default to 100
     - height: number => height of the drawing, default to 100
-    - stroke: string => lines color, default to '#000000'
-    - fill: string => fill color, default to 'transparent'
+    - stroke: string => lines color, default to "#000000"
+    - fill: string => fill color, default to "transparent"
 
 **svg:add(element)** *add an element to the drawing*
 
@@ -35,14 +35,23 @@ can be tested [here](https://www.lua.org/cgi-bin/demo) *(use the minified versio
 **svg:draw()** *return the svg formated string*
 
 ### Elements for svg:add()
-**svg:Rect()** *add a rectangle*
+**svg:Rect(x, y, width, height, stroke, strokeWidth, fill, rx, ry)** *add a rectangle*
 
     - x: number => Horizontal position from top left corner, default to 10
     - y: number => Vertical position from top left corner, default to 10
     - width: number => Width of the rectangle, default to 10
     - height: number => Height of the rectangle, default to 10
-    - stroke: string => lines color, default to '#000000'
+    - stroke: string => lines color, default to svg:create() parameter *("#000000")*
     - strokeWidth: string => lines width, default to 1
-    - fill: string => fill color, default to transparent
+    - fill: string => fill color, default to svg:create() parameter *("transparent")*
     - rx: number => Horizontal raduis of the corners, default to 0
     - ry: number => Vertical radius of the corners, default to 0
+
+**svg:Circle(r, cx, cy, stroke, strokeWidth, fill)** *add a circle*
+
+    - r: number => circle radius, default to 25
+    - cx: number => Horizontal position of the center, default to 30
+    - cy: number => Vertical position of the center, default to 30
+    - stroke: string => lines color, default to svg:create() parameter *("#000000")*
+    - strokeWidth: string => lines width, default to 1
+    - fill: string => fill color, default to svg:create() parameter *("transparent")*

@@ -17,3 +17,5 @@ result :
 ```
 
 can be tested [here](https://www.lua.org/cgi-bin/demo)
+
+`svg.min.lua` generated with [Lua Minifier from Mothereff.in](https://mothereff.in/lua-minifier)

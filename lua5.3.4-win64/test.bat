@@ -1,1 +1,1 @@
-lua53.exe ..\test.lua > result.html
+lua53.exe ..\test.lua > result.svg

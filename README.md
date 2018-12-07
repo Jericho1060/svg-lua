@@ -27,10 +27,10 @@ to test using the binaries included in the project:
 - open a command prompt un the subdirectory `lua5.3.4-win64` *(Shift+Right Click on Windows)*
 - type `lua53.exe ..\test.lua`
 
-If you want to save the output in a file to see the result you can add ` > result.html` or ` >> result.html` following the previous command to save the result in an html file:
+If you want to save the output in a file to see the result you can add `> result.svg` or `>> result.svg` following the previous command to save the result in an html file:
 
-- `lua53.exe ..\test.lua > result.html`: this will create a file `result.html` in the directory with the resul, replacing the file if already exists this can be done using `test.bat`.
-- `lua53.exe ..\test.lua >> result.html`: this will create a file `result.html` in the directory with the resul, appending result to the existing file if already exists.
+- `lua53.exe ..\test.lua > result.svg`: this will create a file `result.svg` in the directory with the resul, replacing the file if already exists this can be done using `test.bat`.
+- `lua53.exe ..\test.lua >> result.svg`: this will create a file `result.svg` in the directory with the resul, appending result to the existing file if already exists.
 
 If you are using a custom test file, replace `test.lua` by your file name.
 

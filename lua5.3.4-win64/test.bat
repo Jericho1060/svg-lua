@@ -1,0 +1,1 @@
+lua53.exe ..\test.lua > result.html

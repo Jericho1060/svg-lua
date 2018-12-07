@@ -1,7 +1,9 @@
 # svg-lua
+
 svg lua library
 
-# usage
+## usage
+
 ```lua
 mon_dessin = svg:create()
 mon_dessin:add(mon_dessin:Rect())
@@ -9,6 +11,7 @@ mon_dessin:draw()
 ```
 
 result for `print(mon_dessin:draw())` :
+
 ```html
 <svg width="100" height="100" fill="transparent" stroke="#000000" version="1.1" xmlns="http://www.w3.org/2000/svg">
     <rect y="10" x="10" stroke-width="1" height="10" width="10" rx="0" ry="0" />
@@ -16,15 +19,29 @@ result for `print(mon_dessin:draw())` :
 ```
 
 ### testing
+
 can be tested [here](https://www.lua.org/cgi-bin/demo) *(use the minified version, the text field is limited in size)*
 
-*you can use the content of the file `test.lua` for testing, it includes the minified version and all elements with default values, the result can be found in `index.html`*
+to test using the binaries included in the project:
+
+- open a command prompt un the subdirectory `lua5.3.4-win64` *(Shift+Right Click on Windows)*
+- type `lua53.exe ..\test.lua`
+
+If you want to save the output in a file to see the result you can add ` > result.html` or ` >> result.html` following the previous command to save the result in an html file:
+
+- `lua53.exe ..\test.lua > result.html`: this will create a file `result.html` in the directory with the resul, replacing the file if already exists this can be done using `test.bat`.
+- `lua53.exe ..\test.lua >> result.html`: this will create a file `result.html` in the directory with the resul, appending result to the existing file if already exists.
+
+If you are using a custom test file, replace `test.lua` by your file name.
 
 ### minified version
+
 `svg.min.lua` generated with [Lua Minifier from Mothereff.in](https://mothereff.in/lua-minifier)
 
-# Documentation
+## Documentation
+
 ### Main methods
+
 **svg:create(width, height, stroke, fill)** *create the svg object*
 
     - width: number => width of the drawing, default to 100
@@ -39,6 +56,7 @@ can be tested [here](https://www.lua.org/cgi-bin/demo) *(use the minified versio
 **svg:draw()** *return the svg formated string*
 
 ### Elements for svg:add(element)
+
 **svg:Text(text, x, y, style, transform)** *add text*
 
     - text: string => the text to write

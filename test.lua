@@ -1,5 +1,10 @@
+-- INCLUDE THE CURRENT PATH FOR LUA AND REQUIRE THE LIB --
+-- DO NOT CHANGE THAT PART --
 package.path = package.path .. ";" .. "..\\?.lua"
 require "svg"
+-- END OF LIBRARY IMPORT --
+
+-- TEST IS STARTING HERE -- YOU CAN MODIFY IT --
 
 mon_dessin = svg:create()
 mon_dessin:add(mon_dessin:Text("Hello World !!"))

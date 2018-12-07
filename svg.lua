@@ -85,7 +85,8 @@ end
 --      fill: string => fill color
 --      rx: number => Rayon x des coins du rectangle
 --      ry: number => Rayon y des coins du rectangle
-function svg:Rect(x, y, width, height, stroke, strokeWidth, fill, rx, ry)
+--      tranform: string => transformation options (eg: rotation)
+function svg:Rect(x, y, width, height, stroke, strokeWidth, fill, rx, ry, transform)
     return self.Element:create("rect", {
         x = x or 10,
         y = y or 10,
@@ -95,7 +96,8 @@ function svg:Rect(x, y, width, height, stroke, strokeWidth, fill, rx, ry)
         fill = fill or self.fill,
         ["stroke-width"] = strokeWidth or 1,
         rx = rx or 0,
-        ry = ry or 0
+        ry = ry or 0,
+        transform = transform or ""
     })
 end
 
@@ -106,14 +108,16 @@ end
 --      stroke: string => lines color
 --      strokeWidth: string => lines width
 --      fill: string => fill color
-function svg:Circle(r, cx, cy, stroke, strokeWidth, fill)
+--      tranform: string => transformation options (eg: rotation)
+function svg:Circle(r, cx, cy, stroke, strokeWidth, fill, transform)
     return self.Element:create("circle", {
         r = r or 25,
         cx = cx or 30,
         cy = cy or 30,
         stroke = stroke or self.stroke,
         ["stroke-width"] = strokeWidth or 1,
-        fill = fill or self.fill
+        fill = fill or self.fill,
+        transform = transform or ""
     })
 end
 
@@ -125,7 +129,8 @@ end
 --      stroke: string => lines color
 --      strokeWidth: string => lines width
 --      fill: string => fill color
-function svg:Ellipse(cx, cy, rx, ry, stroke, strokeWidth, fill)
+--      tranform: string => transformation options (eg: rotation)
+function svg:Ellipse(cx, cy, rx, ry, stroke, strokeWidth, fill, transform)
     return self.Element:create("ellipse", {
         rx = r or 25,
         ry = r or 15,
@@ -133,6 +138,7 @@ function svg:Ellipse(cx, cy, rx, ry, stroke, strokeWidth, fill)
         cy = cy or 30,
         stroke = stroke or self.stroke,
         ["stroke-width"] = strokeWidth or 1,
-        fill = fill or self.fill
+        fill = fill or self.fill,
+        transform = transform or ""
     })
 end

@@ -69,7 +69,7 @@ If you are using a custom test file, replace `test.lua` by your file name.
         * `fill: self.fill` svg:create() parameter ("transparent" by default)
     - tranform: string => transformation options (eg: rotation)
 
-**svg:Rect(x, y, width, height, stroke, strokeWidth, fill, rx, ry)** *add a rectangle*
+**svg:Rect(x, y, width, height, stroke, strokeWidth, fill, rx, ry, transform)** *add a rectangle*
 
     - x: number => Horizontal position from top left corner, default to 10
     - y: number => Vertical position from top left corner, default to 10
@@ -80,8 +80,9 @@ If you are using a custom test file, replace `test.lua` by your file name.
     - fill: string => fill color, default to svg:create() parameter ("transparent" by default)
     - rx: number => Horizontal raduis of the corners, default to 0
     - ry: number => Vertical radius of the corners, default to 0
+    - tranform: string => transformation options (eg: rotation)
 
-**svg:Circle(r, cx, cy, stroke, strokeWidth, fill)** *add a circle*
+**svg:Circle(r, cx, cy, stroke, strokeWidth, fill, transform)** *add a circle*
 
     - r: number => circle radius, default to 25
     - cx: number => Horizontal position of the center, default to 30
@@ -89,8 +90,9 @@ If you are using a custom test file, replace `test.lua` by your file name.
     - stroke: string => lines color, default to svg:create() parameter ("#000000" by default)
     - strokeWidth: string => lines width, default to 1
     - fill: string => fill color, default to svg:create() parameter ("transparent" by default)
+    - tranform: string => transformation options (eg: rotation)
 
-**svg:Ellipse(cx, cy, rx, ry, stroke, strokeWidth, fill)** *add an ellipse*
+**svg:Ellipse(cx, cy, rx, ry, stroke, strokeWidth, fill, transform)** *add an ellipse*
 
     - cx: number => Horizontal position of the center, default to 30
     - cy: number => Vertical position of the center, default to 30
@@ -99,3 +101,4 @@ If you are using a custom test file, replace `test.lua` by your file name.
     - stroke: string => lines color, default to svg:create() parameter ("#000000" by default)
     - strokeWidth: string => lines width, default to 1
     - fill: string => fill color, default to svg:create() parameter ("transparent" by default)
+    - tranform: string => transformation options (eg: rotation)

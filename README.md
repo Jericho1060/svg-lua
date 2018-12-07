@@ -1,6 +1,6 @@
 # svg-lua
 
-svg lua library
+svg lua library *(made for LUA 5.3.4)*
 
 ## usage
 
@@ -20,7 +20,7 @@ result for `print(mon_dessin:draw())` :
 
 ### testing
 
-can be tested [here](https://www.lua.org/cgi-bin/demo) *(use the minified version, the text field is limited in size)*
+can be tested [here](https://www.jdoodle.com/execute-lua-online)
 
 to test using the binaries included in the project:
 

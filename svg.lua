@@ -142,3 +142,23 @@ function svg:Ellipse(cx, cy, rx, ry, stroke, strokeWidth, fill, transform)
         transform = transform or ""
     })
 end
+
+-- function ro create a line
+--      c1: number => Horizontal postion for point 1
+--      y1: number => Vertical position for point 1
+--      x2: number => Horizontal position for point 2
+--      y2: number => Vertical position for point 2
+--      stroke: string => lines color
+--      strokeWidth: string => lines width
+--      fill: string => fill color
+function svg:Line(x1, y1, x2, y2, stroke, strokeWidth, fill)
+    return self.Element:create("line", {
+        x1 = r or 15,
+        y1 = r or 15,
+        x2 = cx or 50,
+        y2 = cy or 45,
+        stroke = stroke or self.stroke,
+        ["stroke-width"] = strokeWidth or 1,
+        fill = fill or self.fill
+    })
+end

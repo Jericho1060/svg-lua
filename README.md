@@ -102,3 +102,13 @@ If you are using a custom test file, replace `test.lua` by your file name.
     - strokeWidth: string => lines width, default to 1
     - fill: string => fill color, default to svg:create() parameter ("transparent" by default)
     - tranform: string => transformation options (eg: rotation)
+
+**svg:Line(x1, y1, x2, y2, stroke, strokeWidth, fill)** *add a line*
+
+    - x1: number => Horizontal position of the center, default to 30
+    - y1: number => Vertical position of the center, default to 30
+    - x2: number => Horizontal radius of the ellipse, default to 25
+    - y2: number => Vertical radius of the ellipse, default to 15
+    - stroke: string => lines color, default to svg:create() parameter ("#000000" by default)
+    - strokeWidth: string => lines width, default to 1
+    - fill: string => fill color, default to svg:create() parameter ("transparent" by default)

@@ -2,7 +2,20 @@
 
 svg lua library *(made for LUA 5.3.4)*
 
+## Installation
+
+You can install the minified version using NPM with NodeJS: `npm i svg-lua`
+
 ## usage
+
+To use the installed minified version, you must add the reference for LUA to the file.
+To do it, add the following at the begining of your LUA file *(replace <path_to_the_node_module_directory> by the correct string eg: ".\\" if it's in the same directory)*:
+***If you are using relative path, think it's the path from the LUA binaries files, not from you code file***
+
+```lua
+package.path = package.path .. ";" .. "<path_to_the_node_modules_directory>\\node_modules\\svg-lua\\?.lua"
+require "svg-min"
+```
 
 ```lua
 mon_dessin = svg:create()

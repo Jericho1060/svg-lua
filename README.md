@@ -36,7 +36,7 @@ If you are using a custom test file, replace `test.lua` by your file name.
 
 ### minified version
 
-`svg-min.lua` generated with [Lua Minifier from Mothereff.in](https://mothereff.in/lua-minifier)
+`svg-min.lua` generated with [luamin](https://github.com/mathiasbynens/luamin)
 
 ## Documentation
 

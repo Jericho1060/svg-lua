@@ -1,2 +1,5 @@
 lua5.3.4-win64/result.html
 lua5.3.4-win64/result.svg
+
+/node_module
+/package-lock.json

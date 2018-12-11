@@ -3,11 +3,6 @@
   "version": "0.6.1",
   "description": "lua lib to create svg content",
   "main": "svg-min.lua",
-  "author": {
-    "name" : "Thomas DAGES",
-    "email" : "contact@tdages.com",
-    "url" : "https://tdages.com"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Jericho1060/svg-lua.git"
@@ -16,7 +11,7 @@
     "lua",
     "svg"
   ],
-  "author": "Thomas Dages <jericho1060@gmail.com> (https://tdages.com)",
+  "author": "Thomas Dages <contact@tdages.com> (https://tdages.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Jericho1060/svg-lua/issues"

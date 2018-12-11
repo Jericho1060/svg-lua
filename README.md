@@ -36,7 +36,7 @@ If you are using a custom test file, replace `test.lua` by your file name.
 
 ### minified version
 
-`svg-min.lua` generated with [luamin](https://github.com/mathiasbynens/luamin)
+`svg-min.lua` generated with [luamin](https://github.com/mathiasbynens/luamin) *(Require NodeJS)*
 
 ## Documentation
 

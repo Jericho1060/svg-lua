@@ -1,5 +1,6 @@
 svg.lua
 test.lua
+minify.bat
 /lua5.3.4-win64
 .gitignore
 /node_module

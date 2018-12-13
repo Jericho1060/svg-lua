@@ -45,6 +45,7 @@ If you are using a custom test file, replace `test.lua` by your file name.
 ### minified version
 
 `svg-min.lua` generated with [luamin](https://github.com/mathiasbynens/luamin) *(Require NodeJS)*
+If you installed luamin, you can use the script `minify.bat` included to minify the file `svg.lua` to `svg-min.lua`
 
 ## Documentation
 

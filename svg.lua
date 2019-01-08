@@ -188,6 +188,7 @@ function svg:Path(d, stroke, strokeWidth, fill, transform)
         d = d or "M50 0 L75 100 L25 100 Z",
         stroke = stroke or self.stroke,
         ["stroke-width"] = strokeWidth or 1,
-        fill = fill or self.fill
+        fill = fill or self.fill,
+        transform = transform or ""
     })
 end

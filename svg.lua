@@ -159,7 +159,8 @@ function svg:Line(x1, y1, x2, y2, stroke, strokeWidth, fill)
         y2 = cy or 45,
         stroke = stroke or self.stroke,
         ["stroke-width"] = strokeWidth or 1,
-        fill = fill or self.fill
+        fill = fill or self.fill,
+        transform = transform or ""
     })
 end
 
@@ -168,12 +169,13 @@ end
 --      stroke: string => lines color
 --      strokeWidth: string => lines width
 --      fill: string => fill color
-function svg:Polyline(points, stroke, strokeWidth, fill)
+function svg:Polyline(points, stroke, strokeWidth, fill, transform)
     return self.Element:create("polyline", {
         points = points or "10,10 50,50 50,25 75,25",
         stroke = stroke or self.stroke,
         ["stroke-width"] = strokeWidth or 1,
-        fill = fill or self.fill
+        fill = fill or self.fill,
+        transform = transform or ""
     })
 end
 
@@ -182,7 +184,7 @@ end
 --      stroke: string => lines color
 --      strokeWidth: string => lines width
 --      fill: string => fill color
-function svg:Path(d, stroke, strokeWidth, fill)
+function svg:Path(d, stroke, strokeWidth, fill, transform)
     return self.Element:create("path", {
         d = d or "M50 0 L75 100 L25 100 Z",
         stroke = stroke or self.stroke,

@@ -168,7 +168,7 @@ end
 --      stroke: string => lines color
 --      strokeWidth: string => lines width
 --      fill: string => fill color
-function svg:Line(points, stroke, strokeWidth, fill)
+function svg:Polyline(points, stroke, strokeWidth, fill)
     return self.Element:create("line", {
         points = points or "10,10 50,50 50,25 75,25",
         stroke = stroke or self.stroke,

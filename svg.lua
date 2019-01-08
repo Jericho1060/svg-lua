@@ -159,8 +159,7 @@ function svg:Line(x1, y1, x2, y2, stroke, strokeWidth, fill)
         y2 = cy or 45,
         stroke = stroke or self.stroke,
         ["stroke-width"] = strokeWidth or 1,
-        fill = fill or self.fill,
-        transform = transform or ""
+        fill = fill or self.fill
     })
 end
 

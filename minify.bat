@@ -1,1 +1,1 @@
-luamin -f svg.lua > lua-min.lua
+luamin -f svg.lua > svg-min.lua

@@ -121,3 +121,10 @@ If you installed luamin, you can use the script `minify.bat` included to minify 
     - stroke: string => lines color, default to svg:create() parameter ("#000000" by default)
     - strokeWidth: string => lines width, default to 1
     - fill: string => fill color, default to svg:create() parameter ("transparent" by default)
+
+**svg:Line(points, stroke, strokeWidth, fill)** *add a polyline*
+
+    - points: string => all the points of the polyline with the standard svg format  "x1,y1 x2,y2 x3,y3 ..."
+    - stroke: string => lines color
+    - strokeWidth: string => lines width
+    - fill: string => fill color

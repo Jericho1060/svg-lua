@@ -162,3 +162,18 @@ function svg:Line(x1, y1, x2, y2, stroke, strokeWidth, fill)
         fill = fill or self.fill
     })
 end
+
+-- function ro create a polyline
+--      points: string => all the points of the polyline with the standard svg format  "x1,y1 x2,y2 x3,y3 ..."
+--      stroke: string => lines color
+--      strokeWidth: string => lines width
+--      fill: string => fill color
+function svg:Line(points, stroke, strokeWidth, fill)
+    return self.Element:create("line", {
+        points = points or "10,10 50,50 50,25 75,25",
+        stroke = stroke or self.stroke,
+        ["stroke-width"] = strokeWidth or 1,
+        fill = fill or self.fill
+    })
+end
+

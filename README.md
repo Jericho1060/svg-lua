@@ -128,3 +128,10 @@ If you installed luamin, you can use the script `minify.bat` included to minify 
     - stroke: string => lines color
     - strokeWidth: string => lines width
     - fill: string => fill color
+
+**svg:Path(d, stroke, strokeWidth, fill)** *add a path*
+
+    - d: string => standard svg parameters
+    - stroke: string => lines color
+    - strokeWidth: string => lines width
+    - fill: string => fill color

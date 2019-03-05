@@ -74,6 +74,9 @@ function svg:Text(text, x, y, style, transform)
         transform = transform or ""
     }, text)
 end
+function svg:addText(text, x, y, style, transform)
+    self:add(self:Text(text, x, y, style, transform))
+end
 
 -- function to create a rectangle
 --      x: number => Position du rectangle sur l'axe horizontal par rapport au coin supérieur gauche
@@ -100,6 +103,9 @@ function svg:Rect(x, y, width, height, stroke, strokeWidth, fill, rx, ry, transf
         transform = transform or ""
     })
 end
+function svg:addRect(x, y, width, height, stroke, strokeWidth, fill, rx, ry, transform)
+    self:add(self:Rect(x, y, width, height, stroke, strokeWidth, fill, rx, ry, transform))
+end
 
 -- function to create a circle
 --      r: number => circle radius
@@ -119,6 +125,9 @@ function svg:Circle(r, cx, cy, stroke, strokeWidth, fill, transform)
         fill = fill or self.fill,
         transform = transform or ""
     })
+end
+function svg:addCircle(r, cx, cy, stroke, strokeWidth, fill, transform)
+    self:add(self:Circle(r, cx, cy, stroke, strokeWidth, fill, transform))
 end
 
 -- function to create an ellipse
@@ -142,6 +151,9 @@ function svg:Ellipse(cx, cy, rx, ry, stroke, strokeWidth, fill, transform)
         transform = transform or ""
     })
 end
+function svg:addEllipse(cx, cy, rx, ry, stroke, strokeWidth, fill, transform)
+    self:add(self:Ellipse(cx, cy, rx, ry, stroke, strokeWidth, fill, transform))
+end
 
 -- function ro create a line
 --      c1: number => Horizontal postion for point 1
@@ -162,6 +174,10 @@ function svg:Line(x1, y1, x2, y2, stroke, strokeWidth, fill)
         fill = fill or self.fill
     })
 end
+function svg:addLine(x1, y1, x2, y2, stroke, strokeWidth, fill)
+    self:add(self:Line(x1, y1, x2, y2, stroke, strokeWidth, fill))
+end
+
 
 -- function ro create a polyline
 --      points: string => all the points of the polyline with the standard svg format  "x1,y1 x2,y2 x3,y3 ..."
@@ -177,6 +193,9 @@ function svg:Polyline(points, stroke, strokeWidth, fill, transform)
         transform = transform or ""
     })
 end
+function svg:addPolyline(points, stroke, strokeWidth, fill, transform)
+    self:add(self:Polyline(points, stroke, strokeWidth, fill, transform))
+end
 
 -- function ro create a polyline
 --      points: string => all the points of the polyline with the standard svg format  "x1,y1 x2,y2 x3,y3 ..."
@@ -191,4 +210,7 @@ function svg:Path(d, stroke, strokeWidth, fill, transform)
         fill = fill or self.fill,
         transform = transform or ""
     })
+end
+function svg:addPath(d, stroke, strokeWidth, fill, transform)
+    self:add(self:Path(d, stroke, strokeWidth, fill, transform))
 end

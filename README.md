@@ -71,6 +71,22 @@ result for `print(rectangle.strElement)` :
 <rect y="10" x="10" stroke-width="1" height="10" width="10" rx="0" ry="0" />
 ```
 
+for several elements, you can use the normal usage and replace the `draw()` method by the `innerdraw()`
+
+```lua
+mon_dessin = svg:create()
+mon_dessin:addRect()
+mon_dessin:addCircle()
+mon_dessin:innerdraw()
+```
+
+result for `print(mon_dessin:innerdraw())` :
+
+```html
+<rect y="10" x="10" stroke-width="1" height="10" width="10" rx="0" ry="0" />
+<circle stroke-width="1" r="25" cy="30" cx="30" transform="" fill="transparent" stroke="#000000" />
+```
+
 ### testing
 
 can be tested [here](https://www.jdoodle.com/execute-lua-online)
@@ -180,6 +196,8 @@ If you installed luamin, you can use the script `minify.bat` included to minify 
     - element: svg.Element => see farther for element list
 
 **svg:draw()** *return the svg formated string*
+
+**svg:draw()** *return the svg formated string for elements added to the drawing, without the outer `<svg>`*
 
 ### Elements for svg:add(element) or elements rendering only
 

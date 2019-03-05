@@ -60,6 +60,15 @@ function svg:draw()
     return svgStr
 end
 
+-- function to get the string formatted for the svg elements whithout the outer <svg>
+function svg:innerdraw()
+    local svgStr = ""
+    for k,v in pairs(self.elements) do
+        svgStr = svgStr .. v.strElement
+    end
+    return svgStr
+end
+
 -- function to add text
 --      text: string => the text to write
 --      x: number => Horizontal position 

@@ -119,11 +119,12 @@ If you installed luamin, you can use the script `minify.bat` included to minify 
     - stroke: string => lines color, default to "#000000"
     - fill: string => fill color, default to "transparent"
 
-**svg:addText(text, x, y, style, transform)** *add text*
+**svg:addText(text, x, y, anchor, style, transform)** *add text*
 
     - text: string => the text to write
     - x: number => Horizontal position, default to 10
     - y: number => Vertical position, default to 50
+    - anchor: string => the text-anchor attribute (start, middle or end)
     - style: string => style of the text (css with svg params), default to:
         * `font-family: Verdana`
         * `font-size: 10`
@@ -201,11 +202,12 @@ If you installed luamin, you can use the script `minify.bat` included to minify 
 
 ### Elements for svg:add(element) or elements rendering only
 
-**svg:Text(text, x, y, style, transform)** *add text*
+**svg:Text(text, x, y, anchor, style, transform)** *add text*
 
     - text: string => the text to write
     - x: number => Horizontal position, default to 10
     - y: number => Vertical position, default to 50
+    - anchor: string => the text-anchor attribute (start, middle or end)
     - style: string => style of the text (css with svg params), default to:
         * `font-family: Verdana`
         * `font-size: 10`

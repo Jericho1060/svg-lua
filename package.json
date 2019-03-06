@@ -1,6 +1,6 @@
 {
   "name": "svg-lua",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "lua lib to create svg content",
   "main": "svg-min.lua",
   "repository": {

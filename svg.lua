@@ -7,7 +7,7 @@ svg.__index = svg;
 --      height: number => height of the drawing
 --      stroke: string => lines color
 --      fill: string => fill color
-function svg:create(width, heigth, stroke, fill)
+function svg:create(width, height, stroke, fill)
     local s = {}
     setmetatable(s,svg)
     s.width = width or 100
@@ -73,12 +73,14 @@ end
 --      text: string => the text to write
 --      x: number => Horizontal position 
 --      y: number => Vertical position
+--      anchor: string => the text-anchor attribute (start, middle or end)
 --      style: string => style of the text (css with svg params)
 --      tranform: string => transformation options (eg: rotation)
-function svg:Text(text, x, y, style, transform)
+function svg:Text(text, x, y, anchor, style, transform)
     return self.Element:create("text", {
         x = x or 10,
         y = y or 50,
+        ["text-anchor"] = anchor or "start",
         style = style or ("font-family: Verdana; font-size: 10; stroke: " .. self.stroke .. "; fill: " .. self.fill .. ";"),
         transform = transform or ""
     }, text)

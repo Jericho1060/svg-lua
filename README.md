@@ -197,7 +197,7 @@ If you installed luamin, you can use the script `minify.bat` included to minify 
 
 **svg:draw()** *return the svg formated string*
 
-**svg:draw()** *return the svg formated string for elements added to the drawing, without the outer `<svg>`*
+**svg:innerdraw()** *return the svg formated string for elements added to the drawing, without the outer `<svg>`*
 
 ### Elements for svg:add(element) or elements rendering only
 

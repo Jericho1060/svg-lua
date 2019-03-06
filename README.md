@@ -24,7 +24,7 @@ result for `print(mon_dessin:draw())` :
 
 ```html
 <svg width="100" height="100" fill="transparent" stroke="#000000" version="1.1" xmlns="http://www.w3.org/2000/svg">
-    <rect y="10" x="10" stroke-width="1" height="10" width="10" rx="0" ry="0" />
+    <rect stroke="#000000" fill="transparent" y="10" x="10" transform="" width="10" height="10" ry="0" rx="0" stroke-width="1" />
 </svg>
 ```
 
@@ -44,8 +44,8 @@ result for `print(mon_dessin:draw())` :
 
 ```html
 <svg width="100" height="100" fill="transparent" stroke="#000000" version="1.1" xmlns="http://www.w3.org/2000/svg">
-    <rect y="10" x="10" stroke-width="1" height="10" width="10" rx="0" ry="0" />
-    <rect y="20" x="20" stroke-width="1" height="10" width="10" rx="0" ry="0" />
+    <rect stroke="#000000" fill="transparent" y="10" x="10" transform="" width="10" height="10" ry="0" rx="0" stroke-width="1" />
+    <rect stroke="#000000" fill="transparent" y="20" x="20" transform="" width="10" height="10" ry="0" rx="0" stroke-width="1" />
 </svg>
 ```
 
@@ -68,7 +68,7 @@ rectangle = mon_dessin:Rect()
 result for `print(rectangle.strElement)` :
 
 ```html
-<rect y="10" x="10" stroke-width="1" height="10" width="10" rx="0" ry="0" />
+<rect stroke="#000000" fill="transparent" y="10" x="10" transform="" width="10" height="10" ry="0" rx="0" stroke-width="1" />
 ```
 
 for several elements, you can use the normal usage and replace the `draw()` method by the `innerdraw()`
@@ -83,7 +83,7 @@ mon_dessin:innerdraw()
 result for `print(mon_dessin:innerdraw())` :
 
 ```html
-<rect y="10" x="10" stroke-width="1" height="10" width="10" rx="0" ry="0" />
+<rect stroke="#000000" fill="transparent" y="10" x="10" transform="" width="10" height="10" ry="0" rx="0" stroke-width="1" />
 <circle stroke-width="1" r="25" cy="30" cx="30" transform="" fill="transparent" stroke="#000000" />
 ```
 

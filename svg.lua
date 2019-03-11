@@ -77,16 +77,23 @@ end
 --      style: string => style of the text (css with svg params)
 --      tranform: string => transformation options (eg: rotation)
 function svg:Text(text, x, y, anchor, style, transform)
-    return self.Element:create("text", {
-        x = x or 10,
-        y = y or 50,
-        ["text-anchor"] = anchor or "start",
-        style = style or ("font-family: Verdana; font-size: 10; stroke: " .. self.stroke .. "; fill: " .. self.fill .. ";"),
-        transform = transform or ""
-    }, text)
+    local options = {
+        x = x or 0,
+        y = y or 0
+    }
+    if not (anchor == nil) and not (anchor == "") then
+        options["text-anchor"] = anchor
+    end
+    if not (style == nil) and not (style == "") then
+        options.style = style
+    end
+    if not (transform == nil) and not (transform == "") then
+        options.transform = transform
+    end
+    return self.Element:create("text", options, text)
 end
-function svg:addText(text, x, y, style, transform)
-    self:add(self:Text(text, x, y, style, transform))
+function svg:addText(text, x, y, anchor, style, transform)
+    self:add(self:Text(text, x, y, anchor, style, transform))
 end
 
 -- function to create a rectangle
@@ -99,20 +106,33 @@ end
 --      fill: string => fill color
 --      rx: number => Rayon x des coins du rectangle
 --      ry: number => Rayon y des coins du rectangle
---      tranform: string => transformation options (eg: rotation)
+--      transform: string => transformation options (eg: rotation)
 function svg:Rect(x, y, width, height, stroke, strokeWidth, fill, rx, ry, transform)
-    return self.Element:create("rect", {
-        x = x or 10,
-        y = y or 10,
-        width = width or 10,
-        height = height or 10,
-        stroke = stroke or self.stroke,
-        fill = fill or self.fill,
-        ["stroke-width"] = strokeWidth or 1,
-        rx = rx or 0,
-        ry = ry or 0,
-        transform = transform or ""
-    })
+    local options = {
+        x = x or 0,
+        y = y or 0,
+        width = width or 20,
+        height = height or 10
+    }
+    if not (stroke == nil) and not (stroke == "") then
+        options.stroke = stroke
+    end
+    if not (fill == nil) and not (fill == "") then
+        options.fill = fill
+    end
+    if not (strokeWidth == nil) and not (strokeWidth == "") then
+        options["stroke-width"] = strokeWidth
+    end
+    if not (rx == nil) and not (rx == "") then
+        options.rx = rx
+    end
+    if not (ry == nil) and not (ry == "") then
+        options.ry = ry
+    end
+    if not (transform == nil) and not (transform == "") then
+        options.transform = transform
+    end
+    return self.Element:create("rect", options)
 end
 function svg:addRect(x, y, width, height, stroke, strokeWidth, fill, rx, ry, transform)
     self:add(self:Rect(x, y, width, height, stroke, strokeWidth, fill, rx, ry, transform))

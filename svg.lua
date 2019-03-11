@@ -147,15 +147,25 @@ end
 --      fill: string => fill color
 --      tranform: string => transformation options (eg: rotation)
 function svg:Circle(r, cx, cy, stroke, strokeWidth, fill, transform)
-    return self.Element:create("circle", {
+    local options = {
         r = r or 25,
         cx = cx or 30,
-        cy = cy or 30,
-        stroke = stroke or self.stroke,
-        ["stroke-width"] = strokeWidth or 1,
-        fill = fill or self.fill,
-        transform = transform or ""
-    })
+        cy = cy or 30
+    }
+    
+    if not (stroke == nil) and not (stroke == "") then
+        options.stroke = stroke
+    end
+    if not (strokeWidth == nil) and not (strokeWidth == "") then
+        options["stroke-width"] = strokeWidth
+    end
+    if not (fill == nil) and not (fill == "") then
+        options.fill = fill
+    end
+    if not (transform == nil) and not (transform == "") then
+        options.transform = transform
+    end
+    return self.Element:create("circle", options)
 end
 function svg:addCircle(r, cx, cy, stroke, strokeWidth, fill, transform)
     self:add(self:Circle(r, cx, cy, stroke, strokeWidth, fill, transform))
@@ -169,18 +179,28 @@ end
 --      stroke: string => lines color
 --      strokeWidth: string => lines width
 --      fill: string => fill color
---      tranform: string => transformation options (eg: rotation)
+--      transform: string => transformation options (eg: rotation)
 function svg:Ellipse(cx, cy, rx, ry, stroke, strokeWidth, fill, transform)
-    return self.Element:create("ellipse", {
-        rx = r or 25,
-        ry = r or 15,
+    local options = {
+        rx = rx or 25,
+        ry = ry or 15,
         cx = cx or 30,
-        cy = cy or 30,
-        stroke = stroke or self.stroke,
-        ["stroke-width"] = strokeWidth or 1,
-        fill = fill or self.fill,
-        transform = transform or ""
-    })
+        cy = cy or 30
+    }
+    
+    if not (stroke == nil) and not (stroke == "") then
+        options.stroke = stroke
+    end
+    if not (strokeWidth == nil) and not (strokeWidth == "") then
+        options["stroke-width"] = strokeWidth
+    end
+    if not (fill == nil) and not (fill == "") then
+        options.fill = fill
+    end
+    if not (transform == nil) and not (transform == "") then
+        options.transform = transform
+    end
+    return self.Element:create("ellipse", options)
 end
 function svg:addEllipse(cx, cy, rx, ry, stroke, strokeWidth, fill, transform)
     self:add(self:Ellipse(cx, cy, rx, ry, stroke, strokeWidth, fill, transform))
@@ -195,15 +215,22 @@ end
 --      strokeWidth: string => lines width
 --      fill: string => fill color
 function svg:Line(x1, y1, x2, y2, stroke, strokeWidth, fill)
-    return self.Element:create("line", {
-        x1 = r or 15,
-        y1 = r or 15,
-        x2 = cx or 50,
-        y2 = cy or 45,
-        stroke = stroke or self.stroke,
-        ["stroke-width"] = strokeWidth or 1,
-        fill = fill or self.fill
-    })
+    local options = {
+        x1 = x1 or 15,
+        y1 = y1 or 15,
+        x2 = x2 or 50,
+        y2 = y2 or 45
+    }
+    if not (stroke == nil) and not (stroke == "") then
+        options.stroke = stroke
+    end
+    if not (strokeWidth == nil) and not (strokeWidth == "") then
+        options["stroke-width"] = strokeWidth
+    end
+    if not (fill == nil) and not (fill == "") then
+        options.fill = fill
+    end
+    return self.Element:create("line", options)
 end
 function svg:addLine(x1, y1, x2, y2, stroke, strokeWidth, fill)
     self:add(self:Line(x1, y1, x2, y2, stroke, strokeWidth, fill))
@@ -216,13 +243,23 @@ end
 --      strokeWidth: string => lines width
 --      fill: string => fill color
 function svg:Polyline(points, stroke, strokeWidth, fill, transform)
-    return self.Element:create("polyline", {
-        points = points or "10,10 50,50 50,25 75,25",
-        stroke = stroke or self.stroke,
-        ["stroke-width"] = strokeWidth or 1,
-        fill = fill or self.fill,
-        transform = transform or ""
-    })
+    local options = {
+        points = points or "10,10 50,50 50,25 75,25"
+    }
+    
+    if not (stroke == nil) and not (stroke == "") then
+        options.stroke = stroke
+    end
+    if not (strokeWidth == nil) and not (strokeWidth == "") then
+        options["stroke-width"] = strokeWidth
+    end
+    if not (fill == nil) and not (fill == "") then
+        options.fill = fill
+    end
+    if not (transform == nil) and not (transform == "") then
+        options.transform = transform
+    end
+    return self.Element:create("polyline", options)
 end
 function svg:addPolyline(points, stroke, strokeWidth, fill, transform)
     self:add(self:Polyline(points, stroke, strokeWidth, fill, transform))
@@ -234,13 +271,23 @@ end
 --      strokeWidth: string => lines width
 --      fill: string => fill color
 function svg:Path(d, stroke, strokeWidth, fill, transform)
-    return self.Element:create("path", {
-        d = d or "M50 0 L75 100 L25 100 Z",
-        stroke = stroke or self.stroke,
-        ["stroke-width"] = strokeWidth or 1,
-        fill = fill or self.fill,
-        transform = transform or ""
-    })
+    local options = {
+        d = d or "M50 0 L75 100 L25 100 Z"
+    }
+    
+    if not (stroke == nil) and not (stroke == "") then
+        options.stroke = stroke
+    end
+    if not (strokeWidth == nil) and not (strokeWidth == "") then
+        options["stroke-width"] = strokeWidth
+    end
+    if not (fill == nil) and not (fill == "") then
+        options.fill = fill
+    end
+    if not (transform == nil) and not (transform == "") then
+        options.transform = transform
+    end
+    return self.Element:create("path", options)
 end
 function svg:addPath(d, stroke, strokeWidth, fill, transform)
     self:add(self:Path(d, stroke, strokeWidth, fill, transform))

@@ -2,8 +2,6 @@
 
 svg lua library *(made for LUA 5.3.4)*
 
-Come and chat with me on Gitter: [![Gitter](https://badges.gitter.im/svg-lua/community.svg)](https://gitter.im/svg-lua/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
 ## Installation
 
 You can install the minified version using NPM with NodeJS: `npm i svg-lua`
